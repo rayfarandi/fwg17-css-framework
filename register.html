@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    
+  </head>
+  <body class="flex flex-row">
+    <div class="flex lg:w-[25%] w-0">
+      <img src="assets/bg-register.webp" alt="gambar bacground kiri" class="w-full h-[100%] object-cover">
+    </div>
+    <div class="flex lg:w-[75%] w-full flex-col gap-5">
+      <!-- <div class="content"> -->
+          <div class="flex flex-row">
+            <img src="./assets/cup-coffe-icon.png" alt="logo" class="flex pt-10 pl-10 lg:pl-12" />
+            <img src="/assets/text-logo.png" alt="logo tulisan" class="flex pl-1 pt-10 " />
+          </div>
+        
+        <div class="flex flex-col px-5">
+          <h1 class="font-semibold text[#8E6447] px-5">Register</h1>
+          <h2 class="text-[14] px-5 pt-3">Fill out the form correctly</h2>
+
+          <form>
+            <div>
+              <label for="fullname"><h3 class="font-semibold px-5 pt-3">Full Name</h3>
+              </label>
+                 <div class="flex mx-5 my-3 border-[1px] rounded">
+                    <div class="w-[7%] flex justify-center">
+                      <i data-feather="users" class="w-4"></i>
+                    </div>
+                    <input 
+                    type="text" 
+                    id="fullname" 
+                    class="w-[93%] py-1 pl-2" 
+                    placeholder="Enter Your Full Name">
+                </div>
+            </div>
+            
+
+            <div>
+              <label for="email"><h3 class="font-semibold px-5 pt-3">Email</h3>
+              </label>
+                 <div class="flex mx-5 my-3 border-[1px] rounded">
+                    <div class="w-[7%] flex justify-center">
+                      <i data-feather="mail" class="w-4"></i>
+                    </div>
+                    <input 
+                    type="text" 
+                    id="email" 
+                    class="w-[93%] py-1 pl-2" 
+                    placeholder="Enter Your Email">
+                </div>
+            </div>
+
+            <div>
+              <label for="password"><h3 class="font-semibold px-5 pt-3">Password</h3>
+              </label>
+                 <div class="flex mx-5 my-3 border-[1px] rounded">
+                    <div class="w-[7%] flex justify-center">
+                      <i data-feather="key" class="w-4"></i>
+                    </div>
+                    <input type="password" id="password" class="w-[90%] py-1 pl-2" placeholder="Enter Your Password">
+                    <div class="w-[3%] flex px-1">
+                      <i data-feather="eye-off" class="w-4"></i>
+                  </div>
+                </div>
+            </div>
+            
+
+            <div>
+              <label for="confirmpassword"><h3 class="font-semibold px-5 pt-3">Confirm Password</h3>
+              </label>
+                 <div class="flex mx-5 my-3 border-[1px] rounded">
+                    <div class="w-[7%] flex justify-center">
+                      <i data-feather="key" class="w-4"></i>
+                    </div>
+                    <input 
+                    type="password" 
+                    id="confirmpassword" 
+                    class="w-[90%] py-1 pl-2" 
+                    placeholder="Enter Your Password Again">
+                    <div class="w-[3%] flex px-1">
+                      <i data-feather="eye-off" class="w-4"></i>
+                    </div> 
+                  </div>
+             </div>
+            <div class="flex justify-center py-3">
+              <button type="submit" class="w-[95%] bg-orange-500 py-2 hover:bg-orange-500/70">Register</button>
+            </div>
+          </form>
+
+          <div class="flex justify-center items-center py-3">
+            <h3 class="text-gray-500 text-[13px]">Have An Account?</h3>
+            <a class="text-orange-500 ml-1" href="./login.html">Login</a>
+          </div>
+
+          <div class="flex justify-center my-3 ">
+            <h3 class=" text[13px] text-gray-500">Or</h3>
+          </div>
+
+          <div class="flex justify-center items-center gap-5 my-5 mx-5">
+            <a href="#" class="flex justify-center items-center gap-5 px-4 py-3 rounded shadow-md lg:w-[46%]">
+                <img src="/assets/google-logo.png" alt="google" class="w-5 h-5 object-contain">
+                <h4 class="hidden lg:block">Google</h4>
+            </a>
+            <a href="#" class="flex justify-center items-center gap-5 px-4 py-3 rounded shadow-md lg:w-[46%]">
+                <img src="/assets/facebook-logo.png" alt="facebook" class="w-5 h-5 object-contain">
+                <h4 class="hidden lg:block">Facebook</h4>
+            </a>
+        </div>
+          
+        </div>
+        
+      <!-- </div> -->
+    </div>
+
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
