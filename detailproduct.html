@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail-Product-Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex flex-col items-center">
+    <!-- nav -->
+    <nav class="flex w-full h-[10%] fixed bg-black">
+      <div class="flex justify-between items-center w-11/12 ml-[5%]"> <!-- bungkus dalam -->
+      <div class="flex gap-10">
+        <div class="flex flex-row">
+          <img src="/assets/cup-coffee-icon-white.png"  class=" flex" alt="logo"/>
+          <img src="/assets/text-logo-white.png" class=" flex pl-1" alt="logo tulisan"/>
+        </div>
+        <div class="flex gap-10">
+          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Home</a>
+          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Product</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-5">
+          <i data-feather="search" class="text-white"></i>
+          <i data-feather="shopping-cart" class="text-white"></i>
+          
+        
+          <a href="./login.html"class="text-white border border-white py-2 px-3 text-sm rounded">Sign In</a>
+        <a href="./register.html" class="bg-orange-500 py-2 px-3 text-sm rounded">Sign Up</a>
+      </div>
+    </div>
+    </nav>
+    <!-- nav -->
+
+
+    <div class="flex w-[85%] items-center mt-14 mb-5">
+     <!-- detail product  -->
+        
+        <div class="flex flex-1 flex-col items-center gap-3 w-fit h-fit"> <!--foto produk-->
+          <img src="assets/detail-product4.jpg" class="w-96 h-96" />
+          <div class="detail-img">
+            <img src="./assets/detail-product1.jpg" />
+            <img src="./assets/detail-product2.jpg" />
+            <img src="./assets/detail-product3.jpg" />
+          </div>
+        </div>
+
+        <div class="flex flex-1 flex-col items-center gap-3 w-fit h-fit">
+          <h1 id="tag">FLASH SALE!</h1>
+          <h1 class="product-name">Hazelnut Latte</h1>
+          <div class="price">
+            <h1 id="base-price">IDR 20.000</h1>
+            <h1 id="discount-price">IDR 10.000</h1>
+          </div>
+          <div class="rating">
+            <div class="rating-stars">
+              <img src="/assets/star.png" />
+              <img src="/assets/star.png" />
+              <img src="/assets/star.png" />
+              <img src="/assets/star.png" />
+              <img src="/assets/star.png" />
+            </div>
+            <p id="rating-number">5.0</p>
+          </div>
+          <div class="review">
+            <p>200+ Review</p>
+            <p>Recommendation</p>
+            <div>
+              <img src="./assets/thumbs-up.png" />
+            </div>
+          </div>
+          <p id="description-product">
+            Cold brewing is a method of brewing that combines ground coffee and
+            cool water and uses time instead of heat to extract the flavor. It
+            is brewed in small batches and steeped for as long as 48 hours.
+          </p>
+          <div class="order-quantity">
+            <h1 id="min">-</h1>
+            <h1 id="quantity">1</h1>
+            <h1 id="plus">+</h1>
+          </div>
+          <div class="product-size">
+            <h4>Choose Size</h4>
+            <div class="sizes">
+              <p class="selected">Regular</p>
+              <p>Medium</p>
+              <p>Large</p>
+            </div>
+          </div>
+          <div class="product-variant">
+            <h4>Hot/Ice?</h4>
+            <div class="variants">
+              <p class="selected">Cold</p>
+              <p>Hot</p>
+            </div>
+          </div>
+          <div class="buttons-order">
+            <button id="buy">Buy</button>
+            <button class="add-to-cart">
+              <div>
+                <img src="./assets/shopping-cart-icon-orange.png" />
+              </div>
+              <p>add to cart</p>
+            </button>
+          </div>
+        </div>
+      
+      <!-- product detail-->
+
+    </div>
+    <!-- content end -->
+
+
+    <div class="flex w-[85%] h-screen justify-center flex-col "> <!-- landing-2 --> 
+      <!-- landing-2 atas -->
+      <div class="flex flex-col gap-4">
+        <h1 class="flex text-5xl">Here is People's <span class="text-amber-600">Favorite</span></h1>
+        <hr class="border-orange-500 border-b-8  w-20">
+
+        <h2 class="text-black text-sm py-2">
+          Let's choose and have a bit taste of poeple's favorite. It might be
+          yours too!
+        </2>
+      </div> <!-- landing-2 atas -->
+
+      <!-- landing-2 bawah -->
+      <div class="flex gap-4 items-center justify-center">
+        <div class="flex justify-center relative"> <!--Card Product-->
+          <img src="./assets/home-product1.jpg" alt="home-product1" class="w-72 bg-orange-500" />
+          <div class="md:absolute relative bg-white w-11/12 shadow-md flex-col top-44 p-2 gap-2">
+            <h1 class="font-semibold">Hazelnut Latte</h1>
+            <h2 class="text-blue-gray-600 text-xs">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </h2 >
+            <h1 class="font-semibold text-orange-500">IDR 20.000</h1>
+            <div class="flex items-center ">
+              <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
+              <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center relative"> <!--Card Product-->
+          <img src="assets/home-product2.jpg" alt="home-product2" class="w-72 bg-orange-500" />
+          <div class="absolute bg-white w-11/12 shadow-md flex-col top-44 p-2 gap-2">
+            <h1 class="font-semibold">Hazelnut Latte</h1>
+            <h2 class="text-blue-gray-600 text-xs">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </h2 >
+            <h1 class="font-semibold text-orange-500">IDR 20.000</h1>
+            <div class="flex items-center ">
+              <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
+              <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center relative"> <!--Card Product-->
+          <img src="assets/home-product3.jpg" alt="home-product3" class="w-72 bg-orange-500" />
+          <div class="absolute bg-white w-11/12 shadow-md flex-col top-44 p-2 gap-2">
+            <h1 class="font-semibold">Hazelnut Latte</h1>
+            <h2 class="text-blue-gray-600 text-xs">
+              You can explore the menu that we provide with fun and have their
+              own taste and make your day better.
+            </h2 >
+            <h1 class="font-semibold text-orange-500">IDR 20.000</h1>
+            <div class="flex items-center ">
+              <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
+              <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div> <!-- landing-2 bawah -->
+    </div><!-- landing-2 -->
+
+<!-- footer -->
+<footer class="flex justify-center items-center w-full h-80 bg-orange-50">
+  <div class="flex flex-col lg:flex-row w-11/12 lg:gap-24">
+   <!-- bungkus -->
+   <div class="flex">
+     <div class="flex flex-col w-80 gap-4">
+     <div class="flex">
+       <img src="/assets/cup-coffe-icon.png"  class="flex" alt="logo"/>
+       <img src="/assets/text-logo.png" class=" flex pl-1" alt="logo tulisan"/>
+     </div>
+     <h3 class="text-gray-500">
+       Coffee Shop is a store that sells some good meals, and especially
+       coffee. We provide high quality beans
+     </h3>
+     <h4 class="text-gray-500">&copy;2020CoffeeStore</h4>
+     </div>
+   </div>
+
+   <div class="flex gap-20">
+     <div class="flex flex-col gap-4">
+       <p class="font-semibold">Product</p>
+       <div class="flex flex-col gap-2">
+         <a class="text-[#4F5665]" href="#">Our Product</a>
+         <a class="text-[#4F5665]" href="#">Pricing</a>
+         <a class="text-[#4F5665]" href="#">Location</a>
+         <a class="text-[#4F5665]" href="#">Countries</a>
+         <a class="text-[#4F5665]" href="#">Blog</a>
+       </div>
+     </div>
+
+     <div class="flex flex-col gap-4">
+       <p class="font-semibold">Engage</p>
+       <div class="flex flex-col gap-2">
+         <a class="text-[#4F5665]" href="#">Partner</a>
+         <a class="text-[#4F5665]" href="#">FAQ</a>
+         <a class="text-[#4F5665]" href="#">About Us</a>
+         <a class="text-[#4F5665]" href="#">Privacy Policy</a>
+         <a class="text-[#4F5665]" href="#">Terms of Service</a>
+       </div>
+     </div>
+   </div>
+
+   <div class="flex flex-col gap-4">
+     <p class="font-semibold">Social Media</p>
+     <div class="flex gap-4">
+       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="facebook" class="w-8 h-8 pt-1" ></i></a>
+       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="twitter" class="w-8 h-8 pt-1 pl-1"></i></a>
+       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="instagram" class="w-8 h-8 pt-1 pl-1"></i></a>
+     </div>
+   </div>
+
+  </div> <!--bungkus-->
+ </footer>
+ <!-- footer end -->
+
+ <script>
+   feather.replace();
+ </script>
+  </body>
+</html>
