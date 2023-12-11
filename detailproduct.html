@@ -19,7 +19,8 @@
       }
     </style>
   </head>
-  <body class="flex flex-col items-center">
+  <body class="flex flex-col items-center w-full h-screen">
+
     <!-- nav -->
     <nav class="flex w-full h-[10%] fixed bg-black">
       <div class="flex justify-between items-center w-11/12 ml-[5%]"> <!-- bungkus dalam -->
@@ -47,98 +48,91 @@
     <!-- nav -->
 
 
-    <div class="flex w-[85%] items-center mt-14 mb-5">
-     <!-- detail product  -->
-        
-        <div class="flex flex-1 flex-col items-center gap-3 w-fit h-fit"> <!--foto produk-->
-          <img src="assets/detail-product4.jpg" class="w-96 h-96" />
-          <div class="detail-img">
-            <img src="./assets/detail-product1.jpg" />
-            <img src="./assets/detail-product2.jpg" />
-            <img src="./assets/detail-product3.jpg" />
-          </div>
-        </div>
-
-        <div class="flex flex-1 flex-col items-center gap-3 w-fit h-fit">
-          <h1 id="tag">FLASH SALE!</h1>
-          <h1 class="product-name">Hazelnut Latte</h1>
-          <div class="price">
-            <h1 id="base-price">IDR 20.000</h1>
-            <h1 id="discount-price">IDR 10.000</h1>
-          </div>
-          <div class="rating">
-            <div class="rating-stars">
-              <img src="/assets/star.png" />
-              <img src="/assets/star.png" />
-              <img src="/assets/star.png" />
-              <img src="/assets/star.png" />
-              <img src="/assets/star.png" />
-            </div>
-            <p id="rating-number">5.0</p>
-          </div>
-          <div class="review">
-            <p>200+ Review</p>
-            <p>Recommendation</p>
-            <div>
-              <img src="./assets/thumbs-up.png" />
-            </div>
-          </div>
-          <p id="description-product">
-            Cold brewing is a method of brewing that combines ground coffee and
-            cool water and uses time instead of heat to extract the flavor. It
-            is brewed in small batches and steeped for as long as 48 hours.
-          </p>
-          <div class="order-quantity">
-            <h1 id="min">-</h1>
-            <h1 id="quantity">1</h1>
-            <h1 id="plus">+</h1>
-          </div>
-          <div class="product-size">
-            <h4>Choose Size</h4>
-            <div class="sizes">
-              <p class="selected">Regular</p>
-              <p>Medium</p>
-              <p>Large</p>
-            </div>
-          </div>
-          <div class="product-variant">
-            <h4>Hot/Ice?</h4>
-            <div class="variants">
-              <p class="selected">Cold</p>
-              <p>Hot</p>
-            </div>
-          </div>
-          <div class="buttons-order">
-            <button id="buy">Buy</button>
-            <button class="add-to-cart">
-              <div>
-                <img src="./assets/shopping-cart-icon-orange.png" />
-              </div>
-              <p>add to cart</p>
-            </button>
-          </div>
-        </div>
-      
-      <!-- product detail-->
-
-    </div>
-    <!-- content end -->
+    <div class="flex items-center mt-32 ">
+      <!-- detail product  -->
+         <!-- foto detail product -->
+         <div class="flex flex-1 flex-col items-center gap-3"> <!--foto produk-->
+           <img src="assets/detail-product4.jpg" class="w-80 h-80">
+           <div class="flex flex-row gap-5">
+             <img src="assets/detail-product1.jpg" class="flex w-28">
+             <img src="assets/detail-product2.jpg" class="flex w-28">
+             <img src="assets/detail-product3.jpg" class="flex w-28">
+           </div>
+         </div> 
+ 
+         <div class="flex flex-1 flex-col gap-2 mr-10">
+           <h1 class="bg-red-600 text-white rounded-xl text-sm p-2 left-2 top-2 w-fit">FLASH SALE!</h1>
+           <h1 class="text-3xl font-bold">Hazelnut Latte</h1>
+           <div class="flex items-center gap-5">
+             <h1 class="font-semibold text-xs text-red-600 line-through">DR 20.000</h1>
+             <h1 class="font-semibold text-lg text-orange-500">IDR 10.000</h1>
+           </div>
+           <div class="flex gap-2">
+             <div class="flex gap-2">
+               <img src="/assets/star.png">
+               <img src="/assets/star.png">
+               <img src="/assets/star.png">
+               <img src="/assets/star.png">
+               <img src="/assets/star.png">
+             </div>
+             <h4 class="text-white">5.0</h4>
+           </div>
+           <div class="flex gap-4 items-center divide-gray-700 divide-x-2 text-sm">
+             <h4>200+ Review</h4>
+             <div class="flex gap-4 pl-5 justify-center">
+               <h4>Recommendation</h4>
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up text-orange-300"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+             </div>
+           </div>
+           <h4 class="text-sm">
+             Cold brewing is a method of brewing that combines ground coffee and
+             cool water and uses time instead of heat to extract the flavor. It
+             is brewed in small batches and steeped for as long as 48 hours.
+           </h4>
+           <div class="flex items-center">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus border border-orange-500 bg-white items-center rounded-sm"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+             <div class="border border-orange-500 justify-center flex w-12">1</div>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus border border-orange-500 bg-orange-500 items-center rounded-sm"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+           </div>
+           <div class="flex flex-col gap-3">
+             <h1 class="font-semibold">Choose Size</h1>
+             <div class="flex justify-between gap-4">
+               <h4 class="flex-1 flex justify-center border border-orange-500 text-sm rounded py-2">Regular</h4>
+               <h4 class="flex-1 flex justify-center border border-gray-50 text-sm rounded py-2">Medium</h4>
+               <h4 class="flex-1 flex justify-center border border-gray-50 text-sm rounded py-2">Large</h4>
+             </div>
+           </div>
+           <div class="flex flex-col gap-2">
+             <h4 class="font-semibold">Hot/Ice?</h4>
+             <div class="flex justify-between gap-4">
+               <p class="flex-1 flex justify-center text-sm border border-[#FF8906] rounded py-1.5">Cold</p>
+               <p class="flex-1 flex justify-center text-sm border border-[#E8E8E8] text-[#4F5665] rounded py-1.5">Hot</p>
+             </div>
+           </div>
+           <div class="flex gap-4 mt-4">
+             <button class="flex-1 bg-[#FF8906] rounded py-1.5">Buy</button>
+             <button class="flex-1 flex justify-center gap-4 text-orange-500 border border-orange-500 rounded py-1.5">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+               <p>add to cart</p>
+             </button>
+           </div>
+         </div>
+       
+       <!-- product detail-->
+ 
+     </div>
+    <!-- detail product -->
 
 
-    <div class="flex w-[85%] h-screen justify-center flex-col "> <!-- landing-2 --> 
+    <!-- conten card -->
+    <div class="flex h-screen justify-center flex-col gap-4 my-6"> <!-- landing-2 --> 
       <!-- landing-2 atas -->
       <div class="flex flex-col gap-4">
-        <h1 class="flex text-5xl">Here is People's <span class="text-amber-600">Favorite</span></h1>
-        <hr class="border-orange-500 border-b-8  w-20">
-
-        <h2 class="text-black text-sm py-2">
-          Let's choose and have a bit taste of poeple's favorite. It might be
-          yours too!
-        </2>
+        <h1 class="flex text-5xl">Recommendation <span class="text-amber-600">For You</span></h1>
       </div> <!-- landing-2 atas -->
 
       <!-- landing-2 bawah -->
-      <div class="flex gap-4 items-center justify-center">
+      <div class="flex justify-center gap-4 mb-28">
         <div class="flex justify-center relative"> <!--Card Product-->
           <img src="./assets/home-product1.jpg" alt="home-product1" class="w-72 bg-orange-500" />
           <div class="md:absolute relative bg-white w-11/12 shadow-md flex-col top-44 p-2 gap-2">
@@ -187,68 +181,75 @@
           </div>
         </div>
 
-        
+      
 
       </div> <!-- landing-2 bawah -->
+      <div class="flex gap-3 justify-center"> <!--page num arrow-->
+        <h3 class="flex justify-center items-center bg-orange-500 rounded-full h-8 w-8">1</h3>
+        <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">2</h3>
+        <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">3</h3>
+        <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">4</h3>
+        <i data-feather="arrow-right" class="flex justify-center items-center rounded-full bg-orange-500 w-8 h-8"></i>
+      </div>
     </div><!-- landing-2 -->
 
-<!-- footer -->
-<footer class="flex justify-center items-center w-full h-80 bg-orange-50">
-  <div class="flex flex-col lg:flex-row w-11/12 lg:gap-24">
-   <!-- bungkus -->
-   <div class="flex">
-     <div class="flex flex-col w-80 gap-4">
-     <div class="flex">
-       <img src="/assets/cup-coffe-icon.png"  class="flex" alt="logo"/>
-       <img src="/assets/text-logo.png" class=" flex pl-1" alt="logo tulisan"/>
-     </div>
-     <h3 class="text-gray-500">
-       Coffee Shop is a store that sells some good meals, and especially
-       coffee. We provide high quality beans
-     </h3>
-     <h4 class="text-gray-500">&copy;2020CoffeeStore</h4>
-     </div>
-   </div>
+    <!-- footer -->
+    <footer class="flex justify-center items-center w-full h-80 bg-orange-50">
+      <div class="flex flex-col lg:flex-row lg:gap-24 my-4">
+      <!-- bungkus -->
+      <div class="flex">
+        <div class="flex flex-col w-80 gap-4">
+        <div class="flex">
+          <img src="/assets/cup-coffe-icon.png"  class="flex" alt="logo"/>
+          <img src="/assets/text-logo.png" class=" flex pl-1" alt="logo tulisan"/>
+        </div>
+        <h3 class="text-gray-500">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </h3>
+        <h4 class="text-gray-500">&copy;2020CoffeeStore</h4>
+        </div>
+      </div>
 
-   <div class="flex gap-20">
-     <div class="flex flex-col gap-4">
-       <p class="font-semibold">Product</p>
-       <div class="flex flex-col gap-2">
-         <a class="text-[#4F5665]" href="#">Our Product</a>
-         <a class="text-[#4F5665]" href="#">Pricing</a>
-         <a class="text-[#4F5665]" href="#">Location</a>
-         <a class="text-[#4F5665]" href="#">Countries</a>
-         <a class="text-[#4F5665]" href="#">Blog</a>
-       </div>
-     </div>
+      <div class="flex gap-20">
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Product</p>
+          <div class="flex flex-col gap-2">
+            <a class="text-[#4F5665]" href="#">Our Product</a>
+            <a class="text-[#4F5665]" href="#">Pricing</a>
+            <a class="text-[#4F5665]" href="#">Location</a>
+            <a class="text-[#4F5665]" href="#">Countries</a>
+            <a class="text-[#4F5665]" href="#">Blog</a>
+          </div>
+        </div>
 
-     <div class="flex flex-col gap-4">
-       <p class="font-semibold">Engage</p>
-       <div class="flex flex-col gap-2">
-         <a class="text-[#4F5665]" href="#">Partner</a>
-         <a class="text-[#4F5665]" href="#">FAQ</a>
-         <a class="text-[#4F5665]" href="#">About Us</a>
-         <a class="text-[#4F5665]" href="#">Privacy Policy</a>
-         <a class="text-[#4F5665]" href="#">Terms of Service</a>
-       </div>
-     </div>
-   </div>
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Engage</p>
+          <div class="flex flex-col gap-2">
+            <a class="text-[#4F5665]" href="#">Partner</a>
+            <a class="text-[#4F5665]" href="#">FAQ</a>
+            <a class="text-[#4F5665]" href="#">About Us</a>
+            <a class="text-[#4F5665]" href="#">Privacy Policy</a>
+            <a class="text-[#4F5665]" href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
 
-   <div class="flex flex-col gap-4">
-     <p class="font-semibold">Social Media</p>
-     <div class="flex gap-4">
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="facebook" class="w-8 h-8 pt-1" ></i></a>
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="twitter" class="w-8 h-8 pt-1 pl-1"></i></a>
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="instagram" class="w-8 h-8 pt-1 pl-1"></i></a>
-     </div>
-   </div>
+      <div class="flex flex-col gap-4">
+        <p class="font-semibold">Social Media</p>
+        <div class="flex gap-4">
+          <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="facebook" class="w-8 h-8 pt-1" ></i></a>
+          <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="twitter" class="w-8 h-8 pt-1 pl-1"></i></a>
+          <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="instagram" class="w-8 h-8 pt-1 pl-1"></i></a>
+        </div>
+      </div>
 
-  </div> <!--bungkus-->
- </footer>
- <!-- footer end -->
+      </div> <!--bungkus-->
+    </footer>
+    <!-- footer end -->
 
- <script>
-   feather.replace();
- </script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
