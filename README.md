@@ -38,6 +38,12 @@ https://cofeeshop-taillwind.netlify.app/
 
 ![Home](./assets/page/home.png)
 
+### Chat Page
+
+https://cofeeshop-taillwind.netlify.app/chat
+
+![Chat](./assets/page/chat.png)
+
 ### Product Page
 
 https://cofeeshop-taillwind.netlify.app/product
