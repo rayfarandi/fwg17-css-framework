@@ -18,60 +18,60 @@ A project coffe shop, build with using HTML 5 Semantic, Tailwind and Responsive 
 
 https://cofeeshop-taillwind.netlify.app/login
 
-![Login](./assets/page/login.PNG)
+![Login](./assets/page/login.png)
 
 ### Register Page
 
 https://cofeeshop-taillwind.netlify.app/register
 
-![Register](./assets/page/register.PNG)
+![Register](./assets/page/register.png)
 
 ### Forgot Page
 
 https://cofeeshop-taillwind.netlify.app/forgotpassword
 
-![ForgotPassword](./assets/page/forgotpassword.PNG)
+![ForgotPassword](./assets/page/forgotpassword.png)
 
 ### Home Page
 
 https://cofeeshop-taillwind.netlify.app/
 
-![Home](./assets/page/home.PNG)
+![Home](./assets/page/home.png)
 
 ### Product Page
 
 https://cofeeshop-taillwind.netlify.app/product
 
-![ProductDestop](./assets/page/product.PNG)
+![ProductDestop](./assets/page/product.png)
 ![ProductMobile](./assets/page/productMobile.PNG)
 
 ### Product Detail Page
 
 https://cofeeshop-taillwind.netlify.app/detailproduct
 
-![ProductDetail](./assets/page/productdetail.PNG)
+![ProductDetail](./assets/page/productdetail.png)
 
 
 ### Checkout Order Page
 
 https://cofeeshop-taillwind.netlify.app/checkout
 
-![Checkout](./assets/page/checkout.PNG)
+![Checkout](./assets/page/checkout.png)
 
 ### History Order Page
 
 https://cofeeshop-taillwind.netlify.app/historiorder
 
-![HistoryOrder](./assets/page/historiorder.PNG)
+![HistoryOrder](./assets/page/historiorder.png)
 
 ### Detail Order Page
 
 https://cofeeshop-taillwind.netlify.app/detailorder
 
-![DetailOrder](./assets/page/detailorder.PNG)
+![DetailOrder](./assets/page/detailorder.png)
 
 ### Profile Page
 
 https://cofeeshop-taillwind.netlify.app/profile
 
-![Profile](./assets/page/profile.PNG)
+![Profile](./assets/page/profile.png)
