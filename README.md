@@ -5,7 +5,7 @@ A project coffe shop, build with using HTML 5 Semantic, Tailwind and Responsive 
 ## Built using
 
 ![HTML5](https://img.shields.io/badge/HTML5-%2320232a.svg?style=for-the-badge&logo=HTML5&logoColor=%2362320232a1DAF)
-![Tailwind]([https://img.shields.io/badge/CSS3-%2320232a.svg?style=for-the-badge&logo=CSS3&logoColor=%2361DAFB](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss))
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Javascript](https://img.shields.io/badge/javascript-%2320232a.svg?style=for-the-badge&logo=javascript&logoColor=#e4a22a)
 ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -30,34 +30,48 @@ https://cofeeshop-taillwind.netlify.app/register
 
 https://cofeeshop-taillwind.netlify.app/forgotpassword
 
-![Register](./assets/page/forgotpassword.PNG)
+![ForgotPassword](./assets/page/forgotpassword.PNG)
 
 ### Home Page
 
-(https://cofeeshop-taillwind.netlify.app/
+https://cofeeshop-taillwind.netlify.app/
 
-![Register](./assets/page/home.PNG)
+![Home](./assets/page/home.PNG)
+
+### Product Page
+
+https://cofeeshop-taillwind.netlify.app/product
+
+![ProductDestop](./assets/page/product.PNG)
+![ProductMobile](./assets/page/productMobile.PNG)
 
 ### Product Detail Page
 
-https://scintillating-cheesecake-c7b786.netlify.app/detailproduct
+https://cofeeshop-taillwind.netlify.app/detailproduct
 
-![Register](./assets/productdetail.PNG)
+![ProductDetail](./assets/page/productdetail.PNG)
 
-### Checkout order Page
 
-https://scintillating-cheesecake-c7b786.netlify.app/checkout
+### Checkout Order Page
 
-![Register](./assets/checkout.PNG)
+https://cofeeshop-taillwind.netlify.app/checkout
 
-### Detail order Page
+![Checkout](./assets/page/checkout.PNG)
 
-https://scintillating-cheesecake-c7b786.netlify.app/detailorder
+### History Order Page
 
-![Register](./assets/detailorder.PNG)
+https://cofeeshop-taillwind.netlify.app/historiorder
+
+![HistoryOrder](./assets/page/historiorder.PNG)
+
+### Detail Order Page
+
+https://cofeeshop-taillwind.netlify.app/detailorder
+
+![DetailOrder](./assets/page/detailorder.PNG)
 
 ### Profile Page
 
-https://scintillating-cheesecake-c7b786.netlify.app/profile
+https://cofeeshop-taillwind.netlify.app/profile
 
-![Register](./assets/profile.PNG)
+![Profile](./assets/page/profile.PNG)
