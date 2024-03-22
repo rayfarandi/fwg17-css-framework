@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail-Order-Page</title>
+    <title>Detail Order Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,211 +17,285 @@
         font-family: "Plus Jakarta Sans", sans-serif;
       }
     </style>
-    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF8906",
+              abu2:"#4F5665",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body class="flex flex-col items-center">
-    <!-- nav -->
-    <nav class="flex w-full h-[10%] fixed bg-black z-10">
-      <div class="flex justify-between items-center w-11/12 ml-[5%]"> <!-- bungkus dalam -->
-      <div class="flex gap-10">
-        <div class="flex flex-row">
-          <img src="/assets/cup-coffee-icon-white.png"  class=" flex" alt="logo"/>
-          <img src="/assets/text-logo-white.png" class=" flex pl-1" alt="logo tulisan"/>
-        </div>
-        <div class="flex gap-10">
-          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Home</a>
-          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Product</a>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-5">
-          <i data-feather="search" class="text-white"></i>
-          <i data-feather="shopping-cart" class="text-white"></i>
-          
-        
-          <a href="./login.html"class="text-white border border-white py-2 px-3 text-sm rounded">Sign In</a>
-        <a href="./register.html" class="bg-orange-500 py-2 px-3 text-sm rounded">Sign Up</a>
-      </div>
-    </div>
-    </nav>
-    <!-- nav -->
-
-    <!-- history order -->
-    <div class="flex flex-col w-[80%] mt-24 ">
-      <div class="flex flex-col mb-5">
-        <h1 class=" text-3xl font-bold">Order #12354-09893</h1>
-        <h3 class="text-gray-600 text-sm">21 March 2023 at 10:30 AM</h3>
-      </div>
-
-      <div class="flex md:flex-row flex-col w-full h-screen gap-6">
-        
-        <div class="flex flex-1 flex-col gap-7"><!--order informasi-->
-          <h1 class="text-xl font-semibold">Order Information</h1>
-
-          <div class="flex flex-col divide-y">
-            
-             <!--isi-->
-            <div class="flex justify-between py-3">
-                <div class=" text-gray-700 items-center gap-2 flex">  
-                <i data-feather="user"></i>
-                <h3>Full Name</h3>
-              </div>
-                <h3 class="font-bold">Ghaluh Wizard Anggoro</h3>
+    <!-- nav start -->
+    <nav class="fixed w-full h-14 flex justify-center bg-black z-50">
+      <div class="flex justify-between items-center w-5/6">
+        <div class="flex gap-12">
+          <div class="flex gap-4">
+            <div>
+              <img src="./assets/cup-coffee-icon-white.png" />
             </div>
-
-              <div class="flex justify-between py-3">
-                <div class= "text-gray-700 items-center gap-2 flex">
-                  <i data-feather="map-pin"></i>
-                  <h3>Address</h3>
-                </div>
-                <h3 class="font-bold">Griya bandung indah</h3>
-              </div>
-
-              <div class="flex justify-between py-3">
-                <div class=" text-gray-700 items-center gap-2 flex">
-                  <i data-feather="phone"></i>
-                  <h3>Phone</h3>
-                </div>
-                <h3 class="font-bold">082116304338</h3>
-              </div>
-
-              <div class="flex justify-between py-3">
-                <div class=" text-gray-700 items-center gap-2 flex">
-                  <i data-feather="credit-card"></i>
-                  <h3>Payment Method</h3>
-                </div>
-                <h3 class="font-bold">Cash</h3>
-              </div>
-
-              <div class="flex justify-between py-3">
-                <div class=" text-gray-700 items-center gap-2 flex">
-                  <i data-feather="truck"></i>
-                  <h3>Shipping</h3>
-                </div>
-                <h3 class="font-bold">Dine In</h3>
-              </div>
-
-              <div class="flex justify-between py-3">
-                <div class=" text-gray-700 items-center gap-2 flex">
-                  <i data-feather="refresh-ccw"></i>
-                  <h3>Status</h3>
-                </div>
-                <h3 class="font-bold text-green-500 rounded-full px-2 flex bg-green-200 items-center">Done</h3>
-              </div>
-
-              <div class="flex justify-between py-3">
-                <h3>Total Transaksi</h3>
-                <h3 class="font-bold text-orange-500">Idr 40.000</h3>
-              </div>
+            <div>
+              <img src="./assets/text-logo-white.png" />
+            </div>
           </div>
-        </div><!--order informasi-->
+          <div class="flex gap-12">
+            <a href="./home.html" class="active:border-b-2 active:border-primary text-white hidden sm:block">Home</a>
+            <a href="./product.html" class="active:border-b-2 active:border-primary text-white hidden sm:block">Product</a>
+          </div>
+        </div>
 
-        <div class="flex flex-col  flex-1 gap-7"> <!--order detail-->
-          <h1 class="font-semibold text-xl">Your Order</h1>
+        <div class="flex items-center gap-5">
+          <i class="text-white hidden sm:block" data-feather="search"></i>
+          <i class="text-white" data-feather="shopping-cart"></i>
+          <i class="sm:hidden text-white" data-feather="menu"></i>
+          <a
+            class="text-white border border-white py-2 px-3 text-sm rounded hidden sm:block"
+            href="./login.html"
+            id="sign-in"
+            >Sign In</a
+          >
+          <a
+            class="bg-primary py-2 px-3 text-sm rounded hidden sm:block"
+            href="./register.html"
+            id="sign-up"
+            >Sign Up</a
+          >
+      </div>
+      </div>
+    </nav>
+    <!-- nav end -->
 
-            <div class="flex flex-col gap-3">
-              <div class="flex gap-4 bg-gray-50 p-2">
-                <img src="assets/checkout-image.jpg" class="w-44"/>
-                <div class="flex flex-col flex-1 gap-2 text-xs p-1">
-                  <h1 class=" text-xs text-white  bg-red-800 rounded-md p-2 w-fit">FLASH SALE!</h1>
-                  <h2 class="font-bold text-lg">Hazelnut Latte</h2>
-                  <div class="flex text-sm w-4/6">
-                    <h4 class="pr-2">2pcs</h4>
-                    <h4 class="flex-1 flex justify-center">Regular</h4>
-                    <h4 class="flex justify-center px-2">Ice</h4>
-                    <h4 class="flex flex-1 justify-center">Dine in</h4>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <h1 class="text-red-500 text-xs font-semibold line-through">IDR 40.000</h1>
-                    <h1 class="text-orange-500 font-semibold text-base">IDR 20.000</h1>
-                  </div>
-                </div>
-              </div>
+    <!-- list history order start -->
+    <div class="flex flex-col gap-2 w-5/6 mt-20 sm:mt-24 mb-6">
+      <h1 class="text-xl sm:text-3xl">
+        Order <span class="font-bold">#12354-09893</span>
+      </h1>
+      <p class="text-abu2 text-xs sm:text-sm">21 March 2023 at 10:30 AM</p>
+    </div>
 
-              <div class="flex flex-col gap-3">
-                <div class="flex gap-4 bg-gray-50 p-2">
-                  <img src="assets/checkout-image.jpg" class="w-44"/>
-                  <div class="flex flex-col flex-1 gap-2 text-xs p-1">
-                    <h1 class=" text-xs text-white  bg-red-800 rounded-md p-2 w-fit">FLASH SALE!</h1>
-                    <h2 class="font-bold text-lg">Hazelnut Latte</h2>
-                    <div class="flex text-sm w-4/6">
-                      <h4 class="pr-2">2pcs</h4>
-                      <h4 class="flex-1 flex justify-center">Regular</h4>
-                      <h4 class="flex justify-center px-2">Ice</h4>
-                      <h4 class="flex flex-1 justify-center">Dine in</h4>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <h1 class="text-red-500 text-xs font-semibold line-through">IDR 40.000</h1>
-                      <h1 class="text-orange-500 font-semibold text-base">IDR 20.000</h1>
-                    </div>
-                  </div>
-                </div>
+    <div class="w-5/6 flex flex-col sm:flex-row gap-4 h-fit sm:h-96 mb-16">
+      <div class="w-full sm:flex-1 flex flex-col gap-6">
+        <h1 class="font-semibold text-base sm:text-xl">Order Information</h1>
 
+        <div class="flex flex-col divide-y">
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-5" data-feather="user"></i>
+              <p class="text-xs sm:text-base">Full Name</p>
             </div>
-          
-        </div><!--order detail-->
+            <h5 class="font-bold text-xs sm:text-base">Ghaluh Wizard Anggoro</h5>
+          </div>
 
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-4" data-feather="map-pin"></i>
+              <p  class="text-xs sm:text-base">Address</p>
+            </div>
+            <h5 class="font-bold text-xs sm:text-base">Griya bandung indah</h5>
+          </div>
+
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-4" data-feather="phone-call"></i>
+              <p  class="text-xs sm:text-base">Phone</p>
+            </div>
+            <h5 class="font-bold text-xs sm:text-base">082116304338</h5>
+          </div>
+
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-4" data-feather="credit-card"></i>
+              <p  class="text-xs sm:text-base">Payment Method</p>
+            </div>
+            <h5 class="font-bold text-xs sm:text-base">Cash</h5>
+          </div>
+
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-4" data-feather="truck"></i>
+              <p  class="text-xs sm:text-base">Shipping</p>
+            </div>
+            <h5 class="font-bold text-xs sm:text-base">Dine In</h5>
+          </div>
+
+          <div class="flex justify-between py-3">
+            <div class="flex gap-3 text-abu2 items-center">
+              <i class="h-4" data-feather="refresh-ccw"></i>
+              <p class="text-xs sm:text-base">Status</p>
+            </div>
+            <h5 class="font-bold text-[#00A700] text-[0.6rem] sm:text-xs bg-[#00A70033] py-1 px-2 rounded-full flex items-center">Done</h5>
+          </div>
+
+          <div class="flex justify-between py-3">
+            <p class="text-abu2 text-xs sm:text-base">Total Transaksi</p>
+            <h5 class="font-bold text-primary text-xs sm:text-base">Idr 40.000</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+          <h4 class="font-semibold">Your Order</h4>
+
+        <div class="flex flex-col gap-3 sm:gap-5 overflow-y-scroll h-[22rem] sm:h-[21rem]">
+          <div class="relative flex items-center gap-2 sm:gap-4 bg-[#E8E8E84D] p-2">
+            <div class="">
+              <img class="w-24 sm:w-36" src="./assets/checkout-image.jpg" />
+            </div>
+            <div class="flex-1 flex flex-col gap-2 sm:gap-3 justify-center">
+              <div class="bg-[#D00000] text-white rounded-3xl text-[0.6rem] sm:text-xs p-1 sm:p-1.5 w-fit">
+                <h1>FLASH SALE!</h1>
+              </div>
+              <h4 class="font-bold text-xs sm:text-base">Hazelnut Latte</h4>
+              <div class="flex divide-x text-xs sm:text-sm text-abu2 divide-abu2 w-48 sm:w-60">
+                <p class="pr-3">2pcs</p>
+                <p class="flex-1 flex justify-center">Regular</p>
+                <p class="flex justify-center px-3">Ice</p>
+                <p class="flex-1 flex justify-center">Dine in</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 40.000</h1>
+                <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 10.000</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex items-center gap-2 sm:gap-4 bg-[#E8E8E84D] p-2">
+            <div class="">
+              <img class="w-24 sm:w-36" src="./assets/checkout-image.jpg" />
+            </div>
+            <div class="flex-1 flex flex-col gap-2 sm:gap-3 justify-center">
+              <div class="bg-[#D00000] text-white rounded-3xl text-[0.6rem] sm:text-xs p-1 sm:p-1.5 w-fit">
+                <h1>FLASH SALE!</h1>
+              </div>
+              <h4 class="font-bold text-xs sm:text-base">Hazelnut Latte</h4>
+              <div class="flex divide-x text-xs sm:text-sm text-abu2 divide-abu2 w-48 sm:w-60">
+                <p class="pr-3">2pcs</p>
+                <p class="flex-1 flex justify-center">Regular</p>
+                <p class="flex justify-center px-3">Ice</p>
+                <p class="flex-1 flex justify-center">Dine in</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 40.000</h1>
+                <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 10.000</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex items-center gap-2 sm:gap-4 bg-[#E8E8E84D] p-2">
+            <div class="">
+              <img class="w-24 sm:w-36" src="./assets/checkout-image.jpg" />
+            </div>
+            <div class="flex-1 flex flex-col gap-2 sm:gap-3 justify-center">
+              <div class="bg-[#D00000] text-white rounded-3xl text-[0.6rem] sm:text-xs p-1 sm:p-1.5 w-fit">
+                <h1>FLASH SALE!</h1>
+              </div>
+              <h4 class="font-bold text-xs sm:text-base">Hazelnut Latte</h4>
+              <div class="flex divide-x text-xs sm:text-sm text-abu2 divide-abu2 w-48 sm:w-60">
+                <p class="pr-3">2pcs</p>
+                <p class="flex-1 flex justify-center">Regular</p>
+                <p class="flex justify-center px-3">Ice</p>
+                <p class="flex-1 flex justify-center">Dine in</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 40.000</h1>
+                <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 10.000</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative flex items-center gap-2 sm:gap-4 bg-[#E8E8E84D] p-2">
+            <div class="">
+              <img class="w-24 sm:w-36" src="./assets/checkout-image.jpg" />
+            </div>
+            <div class="flex-1 flex flex-col gap-2 sm:gap-3 justify-center">
+              <div class="bg-[#D00000] text-white rounded-3xl text-[0.6rem] sm:text-xs p-1 sm:p-1.5 w-fit">
+                <h1>FLASH SALE!</h1>
+              </div>
+              <h4 class="font-bold text-xs sm:text-base">Hazelnut Latte</h4>
+              <div class="flex divide-x text-xs sm:text-sm text-abu2 divide-abu2 w-48 sm:w-60">
+                <p class="pr-3">2pcs</p>
+                <p class="flex-1 flex justify-center">Regular</p>
+                <p class="flex justify-center px-3">Ice</p>
+                <p class="flex-1 flex justify-center">Dine in</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 40.000</h1>
+                <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 10.000</h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- history order -->
+    <!-- list history order end -->
 
-<!-- footer -->
-<footer class="flex justify-center items-center w-full h-80 bg-orange-50">
-  <div class="flex flex-col lg:flex-row w-11/12 lg:gap-24">
-   <!-- bungkus -->
-   <div class="flex">
-     <div class="flex flex-col w-80 gap-4">
-     <div class="flex">
-       <img src="/assets/cup-coffe-icon.png"  class="flex" alt="logo"/>
-       <img src="/assets/text-logo.png" class=" flex pl-1" alt="logo tulisan"/>
-     </div>
-     <h3 class="text-gray-500">
-       Coffee Shop is a store that sells some good meals, and especially
-       coffee. We provide high quality beans
-     </h3>
-     <h4 class="text-gray-500">&copy;2020CoffeeStore</h4>
-     </div>
-   </div>
+    <!-- footer start -->
+    <footer class="flex justify-center items-center w-full h-fit py-6 sm:h-fit sm:py-12 bg-[#F8F8F8]">
+      <div class="flex flex-col w-5/6 gap-4 sm:gap-0">
 
-   <div class="flex gap-20">
-     <div class="flex flex-col gap-4">
-       <p class="font-semibold">Product</p>
-       <div class="flex flex-col gap-2">
-         <a class="text-gray-500" href="#">Our Product</a>
-         <a class="text-gray-500" href="#">Pricing</a>
-         <a class="text-gray-500" href="#">Location</a>
-         <a class="text-gray-500" href="#">Countries</a>
-         <a class="text-gray-500" href="#">Blog</a>
-       </div>
-     </div>
+        <div class="flex flex-col sm:flex-row gap-10 sm:gap-20">
+          <div class="flex flex-col gap-4 w-full sm:w-[21rem]">
+            <div class="flex gap-4">
+              <div>
+                <img src="./assets/cup-coffe-icon.png" />
+              </div>
+              <div>
+                <img src="./assets/text-logo.png" />
+              </div>
+            </div>
+            <p class="text-abu2">
+              Coffee Shop is a store that sells some good meals, and especially
+              coffee. We provide high quality beans
+            </p>
+          </div>
 
-     <div class="flex flex-col gap-4">
-       <p class="font-semibold">Engage</p>
-       <div class="flex flex-col gap-2">
-         <a class="text-gray-500" href="#">Partner</a>
-         <a class="text-gray-500" href="#">FAQ</a>
-         <a class="text-gray-500" href="#">About Us</a>
-         <a class="text-gray-500" href="#">Privacy Policy</a>
-         <a class="text-gray-500" href="#">Terms of Service</a>
-       </div>
-     </div>
-   </div>
+          <div class="flex gap-20">
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold">Product</p>
+              <div class="flex flex-col gap-2">
+                <a class="text-abu2" href="#">Our Product</a>
+                <a class="text-abu2" href="#">Pricing</a>
+                <a class="text-abu2" href="#">Location</a>
+                <a class="text-abu2" href="#">Countries</a>
+                <a class="text-abu2" href="#">Blog</a>
+              </div>
+            </div>
 
-   <div class="flex flex-col gap-4">
-     <p class="font-semibold">Social Media</p>
-     <div class="flex gap-4">
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="facebook" class="w-8 h-8 pt-1" ></i></a>
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="twitter" class="w-8 h-8 pt-1 pl-1"></i></a>
-       <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="instagram" class="w-8 h-8 pt-1 pl-1"></i></a>
-     </div>
-   </div>
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold">Engage</p>
+              <div class="flex flex-col gap-2">
+                <a class="text-abu2" href="#">Partner</a>
+                <a class="text-abu2" href="#">FAQ</a>
+                <a class="text-abu2" href="#">About Us</a>
+                <a class="text-abu2" href="#">Privacy Policy</a>
+                <a class="text-abu2" href="#">Terms of Service</a>
+              </div>
+            </div>
+          </div>
 
-  </div> <!--bungkus-->
- </footer>
- <!-- footer end -->
+          <div class="flex flex-col gap-4">
+            <p class="font-semibold">Social Media</p>
+            <div class="flex gap-4">
+              <a href="#"><img src="./assets/facebook-logo-circle.png" /></a>
+              <a href="#"><img src="./assets/twitter-logo-circle.png" /></a>
+              <a href="#"><img src="./assets/instagram-logo-circle.png" /></a>
+            </div>
+          </div>
+        </div>
 
- <script>
-   feather.replace();
- </script>
+        <p class="text-[#AFB5C0]" id="copyright">&copy;2020CoffeeStore</p>
+
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

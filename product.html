@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product-Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Showcase Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,454 +17,787 @@
         font-family: "Plus Jakarta Sans", sans-serif;
       }
     </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF8906",
+              abu2:"#4F5665",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @layer utilities {
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
 
+        input[type="range"] {
+          background: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+          height: 27px;
+          width: 27px;
+          border-radius: 50%;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          background-color: #f5f6f8;
+        }
+      }
+    </style>
   </head>
-  <body class="flex flex-col items-center gap-10 z-10">
-    <!-- nav -->
-    <nav class="flex w-full h-[10%] fixed bg-black">
-      <div class="flex justify-between items-center w-11/12 ml-[5%]"> <!-- bungkus dalam -->
-      <div class="flex gap-10">
-        <div class="flex flex-row">
-          <img src="/assets/cup-coffee-icon-white.png"  class=" flex" alt="logo"/>
-          <img src="/assets/text-logo-white.png" class=" flex pl-1" alt="logo tulisan"/>
-        </div>
-        <div class="flex gap-10">
-          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Home</a>
-          <a href="#" class="hover:border-b hover:border-orange-500 text-white">Product</a>
-        </div>
-      </div>
-
-      <div class="flex items-center gap-5">
-        <i data-feather="search" class="text-white"></i>
-        <i data-feather="shopping-cart" class="text-white"></i>
-        
-      
-        <a href="./login.html"class="text-white border border-white py-2 px-3 text-sm rounded">Sign In</a>
-      <a href="./register.html" class="bg-orange-500 py-2 px-3 text-sm rounded">Sign Up</a>
-    </div>
-    </div>
-    </nav>
-    <!-- nav -->
-
-    <!-- header -->
-      <header class="flex w-full h-72 flex-col items-center">
-        <img src="/assets/bg-product-list.png" class="flex-1" alt="bacground-product">
-        <h1 class="absolute flex lg:text-5xl text-3xl pt-20 lg:pt-28 text-white justify-center items-center">
-          We Provide Good Coffee and Healthy <br />
-          Meals
-        </h1>
-      </header>
-      
-    <!-- header-->
-
-    <!-- kupon page -->
-    <div class="flex w-full flex-col items-center gap-4">
-      <div class="flex w-5/6 justify-between">
-        <h1 class="text-3xl">Today <span class="text-amber-600">Promo</span></h1>
-        <div class="flex gap-4 ">
-          <i data-feather="arrow-left" class="bg-orange-500 rounded-full h-8 w-8"></i>
-          <i data-feather="arrow-right" class="bg-orange-500 rounded-full h-8 w-8"></i>
-        </div>
-      </div>
-      <!-- kupon -->
-      <div class="w-11/12 justify-center flex gap-8">
-
-        <div class="flex rounded-lg items-center pl-2 w-72 bg-emerald-400"> <!--kupon ibu-->
-          <img src="/assets/motherdaycupon.png" class="h-24" alt="kupon mother day" />
-          <div class="flex flex-col gap-1">
-           <h2 class="text-sm font-bold">HAPPY MOTHER'S DAY!</h2>
-           <h3 class="text-xs">Get one of our favorite menu <br />for free!</h3>
-           <h2 class="text-xs text-white">Klaim Kupon</h2>
-          </div>
-        </div>
-        <div class="flex rounded-lg items-center pl-2 w-72 bg-emerald-400 hidden lg:flex"> <!--kupon ibu-->
-          <img src="/assets/motherdaycupon.png" class="h-24" alt="kupon mother day" />
-          <div class="flex flex-col gap-1">
-           <h2 class="text-sm font-bold">HAPPY MOTHER'S DAY!</h2>
-           <h3 class="text-xs">Get one of our favorite menu <br />for free!</h3>
-           <h2 class="text-xs text-white">Klaim Kupon</h2>
-          </div>
-        </div>
-        <div class="flex rounded-lg items-center pl-2 w-72 bg-emerald-400 hidden lg:flex"> <!--kupon ibu-->
-          <img src="/assets/motherdaycupon.png" class="h-24" alt="kupon mother day" />
-          <div class="flex flex-col gap-1">
-           <h2 class="text-sm font-bold">HAPPY MOTHER'S DAY!</h2>
-           <h3 class="text-xs">Get one of our favorite menu <br />for free!</h3>
-           <h2 class="text-xs text-white">Klaim Kupon</h2>
-          </div>
-        </div>
-        <div class="flex rounded-lg items-center pl-2 w-72 bg-amber-400"> <!--kupon ibu-->
-          <img src="/assets/fatherdaycupon.png" class="h-24" alt="kupon mother day" />
-          <div class="flex flex-col gap-1">
-           <h2 class="text-sm font-bold">Get a cup of coffee for free <br> on sunday morning</h2>
-           <h2 class="text-xs">Only at 7 to 9 AM</h2>
-          </div>
-        </div>
-
-      </div>
-      <div class="w-5/6">
-      <div class="flex gap-1 justify-start">
-        <div class="bg-orange-500 w-8 h-2 rounded-md"></div>
-        <div class="bg-gray-400 w-2 h-2 rounded-md"></div>
-        <div class="bg-gray-400 w-2 h-2 rounded-md"></div>
-        <div class="bg-gray-400 w-2 h-2 rounded-md"></div>
-      </div>
-      </div>
-    </div><!-- kupon page -->
-
-    
-      <!--conten-page-->
-      <div class="w-5/6 flex flex-col gap-3">
-        <h1 class="text-3xl">Our <span class="SPAN">Product</span></h1>
-        <div class="flex  flex-col  gap-3 lg:flex-row"> <!--bungkus tes--> 
-        <!--pencarian-->
-       <div class="flex lg:w-1/5 w-[30%] bg-black rounded-xl h-fit p-4 justify-center text-white hidden lg:block">
-        <form class="flex flex-col gap-4" >
-        
-              <div class="flex justify-between">
-                <h4 class="font-semibold text-sm">Filter</h4>
-                <button type="reset" class="font-semibold text-sm">Reset Filter</button>
-              </div>
-
-              <div class="flex flex-col gap-1">
-                <label for="search-product" class="font-semibold text-sm">Search</label>
-                <input id="search-product" type="text" class="text-xs p-2" placeholder="Search Your Product"/>
-              </div>
-
-              <div class="flex flex-col gap-1 text-sm">
-                <!-- Category -->
-                <h4 class="font-semibold text-sm">Category</h4>
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="favorite-product" value="Favorite Product"/>
-                  <label for="favorite-product">Favorite Product</label>
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="coffee" value="coffee"/>                  
-                  <label for="coffee">Coffee</label>
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="non-coffee" value="non-coffee"/>                  
-                  <label for="non-coffee">Non Coffee</label>
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="foods" value="foods"/>                  
-                  <label for="foods">Foods</label>
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="add-on" value="add-on"/>                  
-                  <label for="add-on">Add-On</label>
-                </div>
-              </div> <!--Category-->
-
-              <div class="flex flex-col gap-2 text-sm">
-                <!--sort by-->
-                <h4 class="font-semibold text-sm">Sort By</h4>
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="buy1get1" value="buy1get1"/> 
-                  <label for="buy1get1">Buy1get1</label>                 
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="flashsale" value="flashsale"/>  
-                  <label for="flashsale">Flashsale</label>                
-                </div>
-
-                <div class="flex gap-2">
-                  <input type="checkbox" name="category" id="birthday-package" value="birthday-package"/>
-                  <label for="birthday-package">Birthday Package</label>
-                </div>
-
-                <div class="flex gap-2">
-                  <label for="cheap">Cheap</label>
-                  <input type="checkbox" name="category" id="cheap" value="cheap"/>
-                </div>
-              </div><!--sort by-->
-
-              <!--range-->
-              <div class="flex flex-col gap-2 text-sm">
-                <label for="range-price">Range Price</label>
-                <input id="range-price" type="range" />
-              </div>
-
-              <button type="submit" class="bg-orange-500 rounded-md w-36 h-8 font-semibold text-sm  text-black ">Apply Filter</button>
-            
-          </form><!--form pencarian-->
-          </div><!--pencarian-->
-        
-        <div class="flex flex-col items-center flex-1 gap-60">
-          <!--product-contain-page-->
-            <div class="grid grid-cols-2 gap-x-10 md:gap-x-20 gap-y-10 md:gap-y-28"> <!--list product-->
-              
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product1.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product2.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product1.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product2.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product1.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex relative justify-center w-fit h-fit"> <!--card-->
-                <div>
-                  <img src="./assets/recommend-product2.jpg" class="w-72" alt="recommend-product1" />
-                </div>
-                <h1 class=" text-xs text-white absolute bg-red-800 rounded-md p-2 left-2 top-1 ">FLASH SALE!</h1>
-                <div class="flex flex-col gap-1 absolute w-11/12 bg-white top-44 p-2 ">
-                  <h1 class="font-semibold text-lg">Hazelnut Latte</h1>
-                  <h2 class="text-sm">
-                    You can explore the menu that we provide with fun and have
-                    their own taste and make your day better.
-                  </h2>
-                  <div class="flex items-center gap-4"> <!--reting-->
-                    <div class="flex flex-row gap-2">
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                      <img src="/assets/star.png" />
-                    </div>
-                    <h2  class="text-base text-black">5.0</h2> 
-                  </div>
-                  <div class="flex items-center gap-5">
-                    <h2 class="text-xs text-red-600 line-through">IDR 20.000</h2>
-                    <h1 class="text-lg font-semibold text-orange-500">IDR 10.000</h1>
-                  </div>
-                  <div class="flex items-center ">
-                    <button class="w-11/12 bg-orange-500 rounded-md mr-1">Buy</button>
-                    <img src="assets/shopping-cart-icon-orange.png" class="flex-1 border border-orange-500"/>
-                  </div>
-                </div>
-              </div>
-            </div> <!--list product-->
-
-            <div class="flex gap-3 "> <!--page num arrow-->
-              <h3 class="flex justify-center items-center bg-orange-500 rounded-full h-8 w-8">1</h3>
-              <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">2</h3>
-              <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">3</h3>
-              <h3 class="flex justify-center items-center bg-gray-200 rounded-full h-8 w-8">4</h3>
-              <i data-feather="arrow-right" class="flex justify-center items-center rounded-full bg-orange-500 w-8 h-8"></i>
+  <body class="flex flex-col items-center gap-6 sm:gap-12">
+    <!-- nav start -->
+    <nav class="fixed w-full h-14 flex justify-center bg-black z-50">
+      <div class="flex justify-between items-center w-5/6">
+        <div class="flex gap-12">
+          <div class="flex gap-4">
+            <div>
+              <img src="./assets/cup-coffee-icon-white.png" />
             </div>
-            <!--page num arrow-->
+            <div>
+              <img src="./assets/text-logo-white.png" />
+            </div>
+          </div>
+          <div class="flex gap-12">
+            <a href="./home.html" class="active:border-b-2 active:border-primary text-white hidden sm:block">Home</a>
+            <a href="./product.html" class="active:border-b-2 active:border-primary text-white hidden sm:block">Product</a>
+          </div>
         </div>
 
+        <div class="flex items-center gap-5">
+          <i class="text-white hidden sm:block" data-feather="search"></i>
+          <i class="text-white" data-feather="shopping-cart"></i>
+          <i class="sm:hidden text-white" data-feather="menu"></i>
+          <a
+            class="text-white border border-white py-2 px-3 text-sm rounded hidden sm:block"
+            href="./login.html"
+            id="sign-in"
+            >Sign In</a
+          >
+          <a
+            class="bg-primary py-2 px-3 text-sm rounded hidden sm:block"
+            href="./register.html"
+            id="sign-up"
+            >Sign Up</a
+          >
+      </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- content start -->
+
+    <header class="hidden sm:flex items-center bg-[url('assets/header-product-page.jpg')] bg-center w-full h-72 mt-12">
+      <h1 class="text-white text-5xl ml-28">
+        We Provide Good Coffee and Healthy <br />
+        Meals
+      </h1>
+    </header>
+    <!-- Today Promo -->
+    <section class="flex flex-col w-full items-center gap-4 overflow-x-hidden mt-20 xl:mt-0">
+      <div class="w-5/6 flex justify-between">
+        <h1 class="text-2xl sm:text-3xl">Today <span class="text-[#8E6447]">Promo</span></h1>
+
+        <div class="hidden sm:flex gap-2">
+          <button type="button" onclick="arrowLeftBtn()">
+          
+            <div class="flex justify-center items-center bg-[#E8E8E8] rounded-full h-8 w-8">
+              <i class="h-5" data-feather="arrow-left"></i>
+            </div>
+          </button>
+
+          <button type="button" onclick="arrowRightBtn()">
+          
+            <div class="flex justify-center items-center bg-primary rounded-full h-8 w-8">
+              <i class="h-5"  data-feather="arrow-right"></i>
+            </div>
+          </button>
         </div>
+      </div>
+
+      <div class="w-fit flex gap-10">
+        <!-- kupon -->
+          <div class="w-full md:pt-6 md:pb-8 flex gap-x-12 overflow-x-scroll no-scrollbar" id="promo-card">
+            <img src="./assets/motherdaycupon.webp" alt="motherdaycupon" class="w-full h-full">
+            <img src="./assets/motherdaycupon.webp" alt="motherdaycupon" class="w-full h-full">
+            <img src="./assets/motherdaycupon.webp" alt="motherdaycupon" class="w-full h-full">
+            <img src="./assets/fatherdaycupon.webp" alt="fatherdaycupon" class="w-full h-full">
+            <img src="./assets/fatherdaycupon.webp" alt="fatherdaycupon" class="w-full h-full">
+            <img src="./assets/motherdaycupon.webp" alt="motherdaycupon" class="w-full h-full">
+          </div>
+        <!-- kupon -->
+      </div>
+
+      <div class="w-5/6">
+        <div class="flex">
+          <img src="./assets/paginate.svg" alt="paginate" class="w-[76px] h-full">
+        </div>
+      </div>
+    </section>
+    <!-- Today Promo -->
+
+    <!-- Navbar Mobile -->
+    
+      <section class="sm:hidden flex w-full justify-center gap-4 ">
+        <div class="w-5/6 flex justify-between gap-2">
+          <div class="w-11/12 flex gap-2 border border-[#DEDEDE] rounded-md p-2">
+            <form class="flex items-center" id="search-by-name">
+            <button class="flex items-center" type="submit"> 
+              <i class="h-4 text-abu2 active:scale-90 transition-all" data-feather="search"></i>
+            </button>
+            <input class="text-abu2 outline-none bg-transparent text-xs w-full" type="text" placeholder="Find Product"/>
+          </form>
+          </div>
+  
+          <button id="btn-filter" class="bg-primary rounded-md p-1 w-fit flex items-center active:scale-95 transition-all">
+            <i class="h-5" data-feather="list"></i>
+          </button>
+        </div>
+      </section>
+      
+      <section id="filter-option" class="hidden sm:hidden absolute h-fit w-5/6 z-40 top-80 flex justify-end">
+        <form class="bg-black p-4 text-white flex flex-col gap-4 rounded-xl">
+  
+          <div class="flex justify-between">
+            <h4 class="font-semibold text-sm">Filter</h4>
+              <button class="font-semibold text-sm active:scale-95 transition-all" type="reset">
+                Reset Filter
+              </button>
+            </div>
+            
+            <div class="flex flex-col gap-3 text-xs">
+              <h4 class="font-semibold text-sm">Category</h4>
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="favorite-product"
+                value="Favorite Product"
+                />
+                <label for="favorite-product">Favorite Product</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="coffee"
+                value="coffee"
+                />
+                <label for="coffee">Coffee</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="non-coffee"
+                value="non-coffee"
+                />
+                <label for="non-coffee">Non Coffee</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="foods"
+                value="foods"
+                />
+                <label for="foods">Foods</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="add-on"
+                value="add-on"
+                />
+                <label for="add-on">Add-On</label>
+              </div>
+            </div>
+            
+            <div class="flex flex-col gap-3 text-xs">
+              <h4 class="font-semibold text-sm">Sort By</h4>
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="buy1get1"
+                value="buy1get1"
+                />
+                <label for="buy1get1">Buy1get1</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="flashsale"
+                value="flashsale"
+                />
+                <label for="flashsale">Flashsale</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="birthday-package"
+                value="birthday-package"
+                />
+                <label for="birthday-package">Birthday Package</label>
+              </div>
+              
+              <div class="flex gap-3">
+                <input
+                type="checkbox"
+                name="category"
+                id="cheap"
+                value="cheap"
+                />
+                <label for="cheap">Cheap</label>
+              </div>
+            </div>
+            
+            <div class="flex flex-col gap-1">
+              <label class="text-sm font-semibold" for="range-price"
+              >Range Price</label
+              >
+              <input id="range-price" type="range" />
+            </div>
+            
+            <button class="bg-primary rounded p-2 text-xs text-black font-semibold active:scale-95 transition-all" type="submit">
+              Apply Filter
+            </button>
+          </form>
+      </section>
+    
+    <!-- Navbar Mobile -->
+
+    <section class="w-full flex flex-col items-center gap-4">
+      <h1 class=" w-5/6 text-2xl sm:text-3xl">Our <span class="text-[#8E6447]">Product</span></h1>
+
+      <div class="w-full px-2 sm:px--0 sm:w-5/6 flex gap-4">
+        <!-- form filter -->
+        <aside class=" hidden sm:block w-1/4 bg-black rounded-xl h-fit p-4 text-white">
+          <form class="flex flex-col gap-4">
+            <div class="flex justify-between">
+              <h4 class="font-semibold text-sm">Filter</h4>
+              <button class="font-semibold text-sm" type="reset">Reset Filter</button>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <label class="font-semibold text-sm" for="search-product">Search</label>
+              <input class="rounded text-xs p-2"
+                id="search-product"
+                type="text"
+                placeholder="Search Your Product"
+              />
+            </div>
+
+            <div class="flex flex-col gap-3 text-xs">
+              <h4 class="font-semibold text-sm">Category</h4>
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="favorite-product"
+                  value="Favorite Product"
+                />
+                <label for="favorite-product">Favorite Product</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="coffee"
+                  value="coffee"
+                />
+                <label for="coffee">Coffee</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="non-coffee"
+                  value="non-coffee"
+                />
+                <label for="non-coffee">Non Coffee</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="foods"
+                  value="foods"
+                />
+                <label for="foods">Foods</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="add-on"
+                  value="add-on"
+                />
+                <label for="add-on">Add-On</label>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-3 text-xs">
+              <h4 class="font-semibold text-sm">Sort By</h4>
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="buy1get1"
+                  value="buy1get1"
+                />
+                <label for="buy1get1">Buy1get1</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="flashsale"
+                  value="flashsale"
+                />
+                <label for="flashsale">Flashsale</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="birthday-package"
+                  value="birthday-package"
+                />
+                <label for="birthday-package">Birthday Package</label>
+              </div>
+
+              <div class="flex gap-3">
+                <input
+                  type="checkbox"
+                  name="category"
+                  id="cheap"
+                  value="cheap"
+                />
+                <label for="cheap">Cheap</label>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <label class="text-sm font-semibold" for="range-price">Range Price</label>
+              <input id="range-price" type="range" />
+            </div>
+
+            <button class="bg-primary rounded p-2 text-xs text-black font-semibold" type="submit">Apply Filter</button>
+          </form>
+        </aside>
+        <!-- form filter -->
+
+        <main class="flex flex-col items-end sm:flex-1">
+          <div class="flex flex-col items-center w-full">
+            <div class="flex flex-wrap justify-center gap-x-4 sm:gap-x-32 gap-y-44 mb-48 max-w-xxl">
+              <!-- Card -->
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/home-product3.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/checkout-image.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/home-product3.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/checkout-image.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/home-product3.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="relative flex justify-center w-fit h-fit">
+                <div>
+                  <img class=" w-48 sm:w-60" src="./assets/checkout-image.jpg" alt="" />
+                </div>
+                <div class="absolute bg-[#D00000] text-white rounded-3xl text-xs p-1.5 left-2 top-2">
+                  <h1>FLASH SALE!</h1>
+                </div>
+                <div class="absolute w-11/12 bg-white top-[85%] p-1.5 sm:p-2 flex flex-col gap-2">
+                  <h1 class="font-semibold text-sm sm:text-base" id="product-name">Hazelnut Latte</h1>
+                  <p class="text-[0.6rem] sm:text-[0.7rem] text-abu2">
+                    You can explore the menu that we provide with fun and have their
+                    own taste and make your day better.
+                  </p>
+                  <div class="flex items-center gap-2 sm:gap-4">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                      <div>
+                        <img class="w-3 sm:w-auto" src="./assets/star.png" />
+                      </div>
+                    </div>
+                    <p class="text-abu2 text-xs sm:text-sm" id="rating-number">5.0</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <h1 class="text-[#D00000] text-[0.6rem] sm:text-xs font-semibold line-through">IDR 20.000</h1>
+                    <h1 class="text-primary font-semibold text-xs sm:text-base" id="product-price">IDR 20.000</h1>
+                  </div>
+                  <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                    <a href="./detailproduct.html" class="w-full sm:w-9/12 bg-primary rounded-md text-xs sm:text-sm py-1 block text-center">Buy</a>
+                    <i class="w-full sm:flex-1 border border-primary text-primary p-1 h-6 sm:h-7 rounded-md" data-feather="shopping-cart"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+            </div>
+            <!-- Pagination -->
+            <div class="flex gap-2">
+              <div class="flex justify-center items-center bg-primary text-xs sm:text-sm rounded-full h-6 w-6 sm:h-8 sm:w-8">
+                <h3>1</h3>
+              </div>
+  
+              <div class="flex justify-center items-center  text-[#A0A3BD] text-xs sm:text-sm bg-[#E8E8E8] rounded-full h-6 w-6 sm:h-8 sm:w-8">
+                <h3>2</h3>
+              </div>
+  
+              <div class="flex justify-center items-center  text-[#A0A3BD] text-xs sm:text-sm bg-[#E8E8E8] rounded-full h-6 w-6 sm:h-8 sm:w-8">
+                <h3>3</h3>
+              </div>
+  
+              <div class="flex justify-center items-center text-[#A0A3BD] text-xs sm:text-sm bg-[#E8E8E8] rounded-full h-6 w-6 sm:h-8 sm:w-8">
+                <h3>4</h3>
+              </div>
+  
+              <div class="flex justify-center items-center bg-primary rounded-full h-6 w-6 sm:h-8 sm:w-8">
+                <i class="text-white h-4 sm:h-auto" data-feather="arrow-right"></i>
+              </div>
+            </div>
+            <!-- Pagination -->
+          </div>
+        </main>
+
+      </div>
+    </section>
+    <!-- content end -->
+
+    <!-- footer start -->
+    <footer class="flex justify-center items-center w-full h-fit py-6 sm:h-fit sm:py-12 bg-[#F8F8F8]">
+      <div class="flex flex-col w-5/6 gap-4 sm:gap-0">
+
+        <div class="flex flex-col sm:flex-row gap-10 sm:gap-20">
+          <div class="flex flex-col gap-4 w-full sm:w-[21rem]">
+            <div class="flex gap-4">
+              <div>
+                <img src="./assets/cup-coffe-icon.png" />
+              </div>
+              <div>
+                <img src="./assets/text-logo.png" />
+              </div>
+            </div>
+            <p class="text-abu2">
+              Coffee Shop is a store that sells some good meals, and especially
+              coffee. We provide high quality beans
+            </p>
+          </div>
+
+          <div class="flex gap-20">
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold">Product</p>
+              <div class="flex flex-col gap-2">
+                <a class="text-abu2" href="#">Our Product</a>
+                <a class="text-abu2" href="#">Pricing</a>
+                <a class="text-abu2" href="#">Location</a>
+                <a class="text-abu2" href="#">Countries</a>
+                <a class="text-abu2" href="#">Blog</a>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold">Engage</p>
+              <div class="flex flex-col gap-2">
+                <a class="text-abu2" href="#">Partner</a>
+                <a class="text-abu2" href="#">FAQ</a>
+                <a class="text-abu2" href="#">About Us</a>
+                <a class="text-abu2" href="#">Privacy Policy</a>
+                <a class="text-abu2" href="#">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <p class="font-semibold">Social Media</p>
+            <div class="flex gap-4">
+              <a href="#"><img src="./assets/facebook-logo-circle.png" /></a>
+              <a href="#"><img src="./assets/twitter-logo-circle.png" /></a>
+              <a href="#"><img src="./assets/instagram-logo-circle.png" /></a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-[#AFB5C0]" id="copyright">&copy;2020CoffeeStore</p>
+
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+      feather.replace();
+
+      //  arrow scrolling card
+       
+      let scrollCard = document.getElementById("promo-card");
+
+      scrollCard.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollCard.scrollLeft += evt.deltaY;
+      });
+
+      const arrowLeftBtn = () => {
+        scrollCard.style.scrollBehavior = "smooth";
+        scrollCard.scrollLeft -= 900;
+      };
+
+      const arrowRightBtn = () => {
+        scrollCard.style.scrollBehavior = "smooth";
+        scrollCard.scrollLeft += 900;
+      };
+
+      //filter mobile
+       const btnFilter = document.querySelector('#btn-filter')
+      const filterOption = document.querySelector('#filter-option')
+
+      btnFilter.addEventListener('click', () => {
+        filterOption.classList.toggle('hidden')
+      })
 
       
-
-      </div> <!--conten-page-->
-
-    <!-- footer -->
-    <footer class="flex justify-center items-center w-full h-80 bg-orange-50">
-      <div class="flex flex-col lg:flex-row w-11/12 lg:gap-24">
-       <!-- bungkus -->
-       <div class="flex">
-         <div class="flex flex-col w-80 gap-4">
-         <div class="flex">
-           <img src="/assets/cup-coffe-icon.png"  class="flex" alt="logo"/>
-           <img src="/assets/text-logo.png" class=" flex pl-1" alt="logo tulisan"/>
-         </div>
-         <h3 class="text-gray-500">
-           Coffee Shop is a store that sells some good meals, and especially
-           coffee. We provide high quality beans
-         </h3>
-         <h4 class="text-gray-500">&copy;2020CoffeeStore</h4>
-         </div>
-       </div>
- 
-       <div class="flex gap-20">
-         <div class="flex flex-col gap-4">
-           <p class="font-semibold">Product</p>
-           <div class="flex flex-col gap-2">
-             <a class="text-gray-500" href="#">Our Product</a>
-             <a class="text-gray-500" href="#">Pricing</a>
-             <a class="text-gray-500" href="#">Location</a>
-             <a class="text-gray-500" href="#">Countries</a>
-             <a class="text-gray-500" href="#">Blog</a>
-           </div>
-         </div>
- 
-         <div class="flex flex-col gap-4">
-           <p class="font-semibold">Engage</p>
-           <div class="flex flex-col gap-2">
-             <a class="text-gray-500" href="#">Partner</a>
-             <a class="text-gray-500" href="#">FAQ</a>
-             <a class="text-gray-500" href="#">About Us</a>
-             <a class="text-gray-500" href="#">Privacy Policy</a>
-             <a class="text-gray-500" href="#">Terms of Service</a>
-           </div>
-         </div>
-       </div>
- 
-       <div class="flex flex-col gap-4">
-         <p class="font-semibold">Social Media</p>
-         <div class="flex gap-4">
-           <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="facebook" class="w-8 h-8 pt-1" ></i></a>
-           <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="twitter" class="w-8 h-8 pt-1 pl-1"></i></a>
-           <a href="#" class="rounded-full bg-orange-500 w-9 h-9"><i data-feather="instagram" class="w-8 h-8 pt-1 pl-1"></i></a>
-         </div>
-       </div>
- 
-      </div> <!--bungkus-->
-     </footer>
-     <!-- footer end -->
- 
-     <script>
-       feather.replace();
-     </script>
+    </script>
   </body>
 </html>
